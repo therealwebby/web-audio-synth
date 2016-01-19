@@ -1,0 +1,45 @@
+<div class="synth">
+  <div class="voice-controls" ng-repeat="voice in webAudio.voices track by $index">
+    <tone></tone>
+    <lfo></lfo>
+    <envelope></envelope>
+  </div>
+  <div class="keyboard" ng-repeat="t in getNumber(octives) track by $index">
+    <div class="key" key data-feq="{{noteFrequencys['c4']}}">
+      <span>C4<br>[a]</span>
+    </div>
+    <div class="key sharp-flat" key data-feq="{{noteFrequencys['c#4']}}">
+      <span>C#4<br>[w]</span>
+    </div>
+    <div class="key" key data-feq="{{noteFrequencys['d4']}}">
+      <span>D4<br>[s]</span>
+    </div>
+    <div class="key sharp-flat" key data-feq="{{noteFrequencys['d#4']}}">
+      <span>D#4<br>[e]</span>
+    </div>
+    <div class="key" key data-feq="{{noteFrequencys['e4']}}">
+      <span>E4<br>[d]</span>
+    </div>
+    <div class="key" key data-feq="{{noteFrequencys['f4']}}">
+      <span>F4<br>[f]</span>
+    </div>
+    <div class="key sharp-flat" key data-feq="{{noteFrequencys['f#4']}}">
+      <span>F#4<br>[t]</span>
+    </div>
+    <div class="key" key data-feq="{{noteFrequencys['g#4']}}">
+      <span>G4<br>[g]</span>
+    </div>
+    <div class="key sharp-flat" key data-feq="{{noteFrequencys['g#4']}}">
+      <span>G#4<br>[y]</span>
+    </div>
+    <div class="key" key data-feq="{{noteFrequencys['a4']}}">
+      <span>A4<br>[h]</span>
+    </div>
+    <div class="key sharp-flat" key data-feq="{{noteFrequencys['a#4']}}">
+      <span>A#4<br>[u]</span>
+    </div>
+    <div class="key" key data-feq="{{noteFrequencys['b4']}}">
+      <span>B4<br>[j]</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon-custom/icomoon.eot?j1wprj');
+    src:url('../fonts/icomoon-custom/icomoon.eot?j1wprj#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon-custom/icomoon.ttf?j1wprj') format('truetype'),
+        url('../fonts/icomoon-custom/icomoon.woff?j1wprj') format('woff'),
+        url('../fonts/icomoon-custom/icomoon.svg?j1wprj#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+}
+
+.icon-thermometer:before {
+    content: "\e900";
+}
+.icon-map:before {
+    content: "\e901";
+}
+.icon-search:before {
+    content: "\e902";
+}

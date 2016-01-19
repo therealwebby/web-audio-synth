@@ -1,0 +1,31 @@
+<div class="envelope panel">
+  <h5 class="panel-title">Envelope</h5>
+
+  <!-- <input type="checkbox" id="envelope-active" ng-model="voice.envelope">
+  <label for="envelope-active" ng-class="voice.envelope ? 'active-button active' : 'active-button'">&nbsp;</label> -->
+
+  <div class="envelope-visual-container">
+    <canvas id="adsr-chart"></canvas>
+  </div>
+
+
+  <fieldset>
+    <h6 class="panel-sub">Attack</h6>
+    <input type="range" ng-model="voice.envelopeSettings.attack" min="0" max="3000" step="100">
+  </fieldset>
+
+  <fieldset>
+    <h6 class="panel-sub">Decay</h6>
+    <input type="range" ng-model="voice.envelopeSettings.decay" min="0" max="3000" step="100">
+  </fieldset>
+
+  <fieldset>
+    <h6 class="panel-sub">Sustain</h6>
+    <input type="range" ng-model="voice.envelopeSettings.sustain" min="0" max="1" step="0.05">
+  </fieldset>
+
+  <fieldset>
+    <h6 class="panel-sub">Release</h6>
+    <input type="range" ng-model="voice.envelopeSettings.release" min="0" max="3000" step="100">
+  </fieldset>
+</div>

@@ -1,0 +1,90 @@
+// ------------------------------------------------------------
+// Mixins
+// ------------------------------------------------------------
+
+// -------------------------------------------------------
+// List styles
+// -------------------------------------------------------
+
+// Mixins for list style types
+@mixin unordered {
+	 list-style-position: outside;
+	 list-style-type: disc;
+}
+
+@mixin unordered-inside {
+	 list-style-position: inside;
+	 list-style-type: disc;
+}
+
+@mixin ordered {
+	list-style-position: outside;
+	list-style-type: decimal;
+}
+
+@mixin ordered-inside {
+	list-style-position: inside;
+	list-style-type: decimal;
+}
+
+@mixin nobullet {
+	list-style-type: none;
+}
+
+// -------------------------------------------------------
+// Link hover styles
+// -------------------------------------------------------
+
+@mixin link-active-styles {
+	&:hover, &:focus, &:active {
+		@content;
+	}
+}
+
+
+// -------------------------------------------------------
+// Align things vertically (http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/)
+// -------------------------------------------------------
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+// -------------------------------------------------------
+// HEX to RGB
+// -------------------------------------------------------
+
+// http://codepen.io/sturobson/pen/hdKyv
+@mixin rgba($color, $value) {
+	background-color: $color;
+	background-color: rgba($color, $value);
+}
+
+// -------------------------------------------------------
+// Grid
+// -------------------------------------------------------
+
+
+@mixin grid-box($margin: true) {
+	float: left;
+	display: block;
+	@if $margin ==  true {
+		margin: 0 $gutter;
+	}
+}
+
+// -------------------------------------------------------
+// Border-Box
+// -------------------------------------------------------
+
+@mixin border-box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}

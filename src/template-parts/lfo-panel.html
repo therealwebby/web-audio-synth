@@ -1,0 +1,32 @@
+<div class="lfo panel">
+  <h5 class="panel-title">LFO</h5>
+
+  <input type="checkbox" id="lfo-active" ng-model="voice.lfo">
+  <label for="lfo-active" ng-class="voice.lfo ? 'active-button active' : 'active-button'">&nbsp;</label>
+
+  <input type="radio" ng-model="voice.lfoSettings.type" name="lfo-type" value="sine" id="lfo-sine">
+  <label for="lfo-sine" ng-class="voice.lfoSettings.type === 'sine' ? 'tone-btn left active' : 'tone-btn left'">
+    <img src="svg/sine-wave.svg" alt="sine-wave" />
+  </label>
+
+  <input type="radio" ng-model="voice.lfoSettings.type" name="lfo-type" value="square" id="lfo-square">
+  <label for="lfo-square" ng-class="voice.lfoSettings.type === 'square' ? 'tone-btn active' : 'tone-btn'">
+    <img src="svg/square-wave.svg" alt="square-wave" />
+  </label>
+
+  <input type="radio" ng-model="voice.lfoSettings.type" name="lfo-type" value="sawtooth" id="lfo-sawtooth">
+  <label for="lfo-sawtooth" ng-class="voice.lfoSettings.type === 'sawtooth' ? 'tone-btn left bottom active' : 'tone-btn left bottom'">
+    <img src="svg/sawtooth-wave.svg" alt="sawtooth-wave" />
+  </label>
+
+  <input type="radio" ng-model="voice.lfoSettings.type" name="lfo-type" value="triangle" id="lfo-triangle">
+  <label for="lfo-triangle" ng-class="voice.lfoSettings.type === 'triangle' ? 'tone-btn bottom active' : 'tone-btn bottom'">
+    <img src="svg/triangle-wave.svg" alt="traingle-wave" />
+  </label>
+
+  <h6 class="panel-sub">Fequency</h6>
+  <input type="range" ng-model="voice.lfoSettings.frequency" min="0" max="50" step="1">
+
+  <h6 class="panel-sub">Modulation</h6>
+  <input type="range" ng-model="voice.lfoSettings.gain" min="0" max="100" step="1">
+</div>

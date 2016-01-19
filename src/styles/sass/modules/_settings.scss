@@ -1,0 +1,73 @@
+// ------------------------------------------------------------
+// Breakpoints
+// ------------------------------------------------------------
+
+$a-vp								: 420px;	// larger mobile
+$b-vp								: 500px;	// larger mobile
+
+// ------------------------------------------------------------
+// Colour Palette
+// -----------------------------------------------------------
+
+$darkest-blue: #111821;
+$dark-grey: #333;
+$middle-grey: #939393;
+$light-grey: #acacac;
+$lightest-grey: #f0f0f0;
+
+$light-cream: #f3ece6;
+
+$light-transparency: rgba(255,255,255,0.05);
+$lighter-transparency: rgba(255,255,255,0.1);
+$lightest-transparency: rgba(255,255,255,0.2);
+
+$darken-transparency: rgba(0,0,0,0.05);
+$darker-transparency: rgba(0,0,0,0.1);
+
+
+//Stucture
+$background-color: $light-cream;
+
+//Brand colours
+$main-color: $lightest-transparency;
+
+//Text
+$text-colour-dark: $dark-grey;
+$text-colour-light: $lightest-grey;
+
+//Inputs
+$text-input: $text-colour-dark;
+
+$slider-handle-border: $text-colour-dark;
+$slider-handle-backgroud: $light-cream;
+
+$slider-range-color: $text-colour-dark;
+$slider-range-active: $darkest-blue;
+
+//Keyboard
+$sharp-color: $darken-transparency;
+$key-border: $middle-grey;
+$key-text-color: $light-grey;
+
+//Panels
+$panel-color: $light-cream;
+
+// ------------------------------------------------------------
+// Typography
+// -----------------------------------------------------------
+
+$base-font-size : 1rem;
+$mobile-base-size : $base-font-size * 0.75;
+
+$serif : 'Bitter', serif;
+$sans-serif : 'Open Sans', sans-serif;
+
+$heading-font : $serif;
+$body-font : $sans-serif;
+
+// ------------------------------------------------------------
+// Keyboard
+// -----------------------------------------------------------
+
+$key-height : 60px;
+$key-width : 60px;

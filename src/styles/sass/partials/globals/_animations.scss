@@ -1,0 +1,9 @@
+.ng-show {
+  transition: 1s all cubic-bezier(0.165, 0.84, 0.44, 1);
+  opacity: 1;
+}
+
+.ng-hide {
+  transition: 0.3s all cubic-bezier(0.165, 0.84, 0.44, 1);
+  opacity: 0;
+}

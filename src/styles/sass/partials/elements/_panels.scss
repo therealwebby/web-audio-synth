@@ -1,0 +1,128 @@
+.voice-controls {
+  @extend %clearfix;
+
+  .panel {
+    @extend  %clearfix;
+    float: left;
+    position: relative;
+    padding: 20px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 3px;
+    margin: 0 2% 4% 0;
+    background-color: $panel-color;
+
+    h5.panel-title {
+      position: absolute;
+      top: -12px;
+      margin: 0;
+
+      background-color: $panel-color;
+      padding: 6px 8px;
+    }
+
+    h6.panel-sub {
+      float: left;
+      margin-top: $base-font-size;
+      margin-bottom: $base-font-size;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    input[type="range"] {
+      float:left;
+      max-width: 100%;
+      margin: 0;
+    }
+
+    .active-button {
+      display: block;
+      position: absolute;
+      height: 16px;
+      width: 16px;
+      top: -8px;
+      right: 20px;
+      border: 1px solid rgba(0,0,0,0.3);
+      background-color: $light-cream;
+      border-radius: 5px;
+      padding: 0px;
+
+      &.active {
+        background-color: rgb(75,75,75);
+      }
+    }
+
+    .tone-btn {
+      float:left;
+      width: 45%;
+      margin-bottom: 13%;
+      padding: 4px 2px;
+
+      background-color: $darker-transparency;
+      border-radius: 2px;
+
+      &.left {
+        margin-right: 10%;
+      }
+
+      &.bottom {
+        margin-bottom: 0;
+      }
+
+      &.active {
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      img {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        max-height: 25px;
+      }
+    }
+
+    &.tone,
+    &.lfo {
+      position: relative;
+      width: 28%;
+      @media screen and (max-width: $a-vp) {
+        margin-right: 4%;
+        width: 48%;
+      }
+    }
+
+    &.lfo {
+      @media screen and (max-width: $a-vp) {
+        margin-right: 0;
+        width: 48%;
+      }
+    }
+
+    &.envelope {
+      width: 40%;
+      margin-right: 0px;
+
+      @media screen and (max-width: $a-vp) {
+        width: 100%;
+      }
+
+      @media screen and (min-width: $a-vp) and (max-width: $b-vp) {
+        .envelope-visual-container {
+          height: 74px !important;
+        }
+      }
+
+      fieldset {
+        float: left;
+        width: 48%;
+        margin-right: 4%;
+
+        &:nth-child(even) {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

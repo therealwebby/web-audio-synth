@@ -1,0 +1,31 @@
+/*--------------------------------------------------------------
+Elements
+--------------------------------------------------------------*/
+
+html,
+body,
+main {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  background: $background-color;
+}
+
+html * {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  position: absolute;
+  font-size: 0.75 * $base-font-size;
+  bottom: 20px;
+  right: 20px;
+}

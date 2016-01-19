@@ -1,0 +1,16 @@
+#synth-container {
+  position: relative;
+  margin: 20px auto 0;
+
+  max-width: 90%;
+  @extend %clearfix;
+
+  @media screen and (min-width: $a-vp) {
+    @include vertical-align;
+  }
+
+  @media screen and (min-width: $b-vp) {
+    max-width: 490px;
+  }
+
+}

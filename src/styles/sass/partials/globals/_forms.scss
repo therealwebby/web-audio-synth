@@ -1,0 +1,174 @@
+/*--------------------------------------------------------------
+Forms
+--------------------------------------------------------------*/
+
+label, legend, select {
+  display: block;
+}
+
+input:focus,
+button:focus{
+  outline: none;
+  box-shadow: 0 0 2px 2px rgba(0 , 0, 0, 0.1);
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  *margin-top: 0;
+  line-height: normal;
+  cursor: pointer;
+}
+
+input[type="file"],
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+}
+
+select,
+input[type="file"] {
+  *margin-top: 4px; /* In IE7, the height of the select element cannot be changed by height, only font-size */
+}
+
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+input[type="text"]{
+  border: 0;
+  border-bottom: 1px solid $lightest-transparency;
+  background-color: transparent;
+}
+
+input[type="range"]{
+  -webkit-appearance: none;
+  background-color: transparent;
+  width: 100%;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent; /* Hides the slider so custom styles can be added */
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  border: 2px solid $slider-handle-border;
+  height: $base-font-size;
+  width: $base-font-size;
+  border-radius: 50%;
+  background: $slider-handle-backgroud;
+  cursor: pointer;
+  margin-top: -($base-font-size / 2); /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  border: 2px solid $slider-handle-border;
+  height: $base-font-size;
+  width: $base-font-size;
+  border-radius: 50%;
+  background: $slider-handle-backgroud;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  border: 2px solid $slider-handle-border;
+  height: $base-font-size;
+  width: $base-font-size;
+  border-radius: 50%;
+  background: $slider-handle-backgroud;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: $slider-range-color;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: $slider-range-active;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: $slider-range-color;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: $slider-range-color;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: $slider-range-active;
+}
+input[type=range]::-ms-fill-upper {
+  background: $slider-range-color;
+  border: 0;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: $slider-range-active;
+}
+
+button {
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  padding: 10px;
+  border: 2px solid $text-colour-light;
+  background-color: transparent;
+  font-size: 0.875 * $base-font-size;
+  color: $text-colour-light;
+  text-transform: uppercase;
+}
+
+button:hover {
+  cursor: pointer;
+  transition: 0.4s ease-out all;
+  border-color: $lightest-transparency;
+  background-color: $lighter-transparency;
+}
