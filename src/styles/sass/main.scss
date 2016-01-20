@@ -19,8 +19,10 @@
 
 #web-audio {
   //Globals
-  @import "partials/globals/typography";
   @import "partials/globals/elements";
+  @include main;
+  @import "partials/globals/typography";
+
   @import "partials/globals/forms";
   @import "partials/globals/animations";
 
