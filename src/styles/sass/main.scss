@@ -14,16 +14,18 @@
 @import "modules/mixins";
 @import "modules/placeholders";
 
-@import "partials/globals/reset";
+//@import "partials/globals/reset";
 @import "partials/globals/clearfix";
 
-//Globals
-@import "partials/globals/typography";
-@import "partials/globals/elements";
-@import "partials/globals/forms";
-@import "partials/globals/animations";
+#web-audio {
+  //Globals
+  @import "partials/globals/typography";
+  @import "partials/globals/elements";
+  @import "partials/globals/forms";
+  @import "partials/globals/animations";
 
-//Elements
-@import "partials/elements/synth";
-@import "partials/elements/panels";
-@import "partials/elements/keyboard";
+  //Elements
+  @import "partials/elements/synth";
+  @import "partials/elements/panels";
+  @import "partials/elements/keyboard";
+}

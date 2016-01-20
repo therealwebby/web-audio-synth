@@ -26,8 +26,6 @@ var fs = require('fs'),
     },
     jsFiles = [
       'src/scripts/libs/Chart.js',
-      'src/scripts/libs/angular.js',
-      'src/scripts/libs/angular-animate.js',
       'src/scripts/envelope.js',
       'src/scripts/web-audio-components.js',
       'src/scripts/app.js'
@@ -37,16 +35,21 @@ var fs = require('fs'),
 gulp.task('styles', function() {
   return gulp.src('src/styles/sass/main.scss')
     .pipe(sass(sassOpt).on('error', sass.logError))
+    .pipe(rename({
+      prefix: 'synth-'
+    }))
     //Set auto prefixer to look back 2 versions
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     //Save this file to the css director
-    .pipe(gulp.dest('public/css'))
+    .pipe(gulp.dest('plugin/css'))
     //Append min to file name
-    .pipe(rename({suffix: '.min'}))
+    .pipe(rename({
+      suffix: '.min',
+    }))
     //Minify the file
     .pipe(minifycss())
     //Save the minified file
-    .pipe(gulp.dest('public/css'))
+    .pipe(gulp.dest('plugin/css'))
     //Notification of completed task
     .pipe(notify({ message: 'Sass task complete' }));
 });
@@ -58,47 +61,49 @@ gulp.task('javascript', function() {
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
     //Concentrates javascript files into app.js
-    .pipe(concat('app.js'))
+    .pipe(concat('synth-app.js'))
     //Saves concat file
-    .pipe(gulp.dest('public/js'))
+    .pipe(gulp.dest('plugin/js'))
     //Appeds .min to name of files
-    .pipe(rename({suffix: '.min'}))
+    .pipe(rename({
+      suffix: '.min'
+    }))
     //Minifys the file
     .pipe(uglify())
     //Saves file into dist file directory
-    .pipe(gulp.dest('public/js'))
+    .pipe(gulp.dest('plugin/js'))
     //Notification of completed task
     .pipe(notify({ message: 'Javascript task complete' }));
 });
 
 gulp.task('move-html', function() {
   gulp.src('src/**/*.html')
-  .pipe(gulp.dest('public'))
+  .pipe(gulp.dest('plugin'))
   .pipe(notify({ message: '.html files moved', onLast: true }));
 });
 
 gulp.task('move-svg', function() {
   gulp.src('src/svg/**/*')
-  .pipe(gulp.dest('public/svg'))
+  .pipe(gulp.dest('plugin/svg'))
   .pipe(notify({ message: '.svgs moved', onLast: true }));
 });
 
 gulp.task('move-fonts', function() {
   gulp.src('src/fonts/**/*.{ttf,woff,woff2,eot,svg}')
-  .pipe(gulp.dest('public/fonts'))
+  .pipe(gulp.dest('plugin/fonts'))
   .pipe(notify({ message: 'Fonts moved', onLast: true }));
 });
 
 gulp.task('images', function() {
   return gulp.src('src/images/**/*')
     .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('public/images'))
+    .pipe(gulp.dest('plugin/images'))
     .pipe(notify({ message: 'Images optimised', onLast: true }));
 });
 
 gulp.task('clean', function() {
   return Promise.all([
-    del(['public/*'])
+    del(['plugin/*'])
   ]);
 });
 
@@ -130,6 +135,6 @@ gulp.task('watch', function() {
 
   livereload.listen();
 
-  gulp.watch(['public/**']).on('change', livereload.changed);
+  gulp.watch(['plugin/**']).on('change', livereload.changed);
 
 });
